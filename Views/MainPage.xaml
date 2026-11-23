@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:MauiApp.ViewModels"
+             x:Class="MauiApp.Views.MainPage"
+             x:DataType="vm:MainViewModel"
+             Title="Inicio">
+    <VerticalStackLayout Padding="24" Spacing="16" VerticalOptions="Center">
+        <Label Text="¡Hola, MAUI!" FontSize="28" HorizontalOptions="Center" />
+        <Label Text="{Binding Count, StringFormat='Clics: {0}'}" HorizontalOptions="Center" />
+        <Button Text="Pulsar" Command="{Binding IncrementCommand}" />
+    </VerticalStackLayout>
+</ContentPage>

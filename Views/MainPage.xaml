@@ -9,5 +9,6 @@
         <Label Text="¡Hola, MAUI!" FontSize="28" HorizontalOptions="Center" />
         <Label Text="{Binding Count, StringFormat='Clics: {0}'}" HorizontalOptions="Center" />
         <Button Text="Pulsar" Command="{Binding IncrementCommand}" />
+        <Button Text="Clear" Command="{Binding ClearCommand}"/>
     </VerticalStackLayout>
 </ContentPage>

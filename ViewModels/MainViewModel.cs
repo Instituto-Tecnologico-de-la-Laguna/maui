@@ -11,6 +11,7 @@ public class MainViewModel : INotifyPropertyChanged
 	public MainViewModel()
 	{
 		IncrementCommand = new Command(() => Count++);
+		ClearCommand = new Command(() => Count = 0);
 	}
 
 	public int Count
@@ -20,6 +21,7 @@ public class MainViewModel : INotifyPropertyChanged
 	}
 
 	public ICommand IncrementCommand { get; }
+	public ICommand ClearCommand { get; }
 
 	public event PropertyChangedEventHandler? PropertyChanged;
 	private void OnPropertyChanged([CallerMemberName] string? name = null)
